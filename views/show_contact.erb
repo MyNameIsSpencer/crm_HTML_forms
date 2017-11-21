@@ -2,3 +2,12 @@
 
 <h3><%= @contact.full_name%></h3>
 <div class = "contacter"><p>note: <%= @contact.note%></p> <p>id: <%= @contact.id%></p></div>
+
+
+<form action='/contacts/<%= @contact.id %>' method='post'>
+  <input type='hidden' name='_method' value='delete'>
+  <input type='submit' value="Delete Contact">
+
+</form>
+<br>
+<a href="/contacts/<%= @contact.id %>/edit">Edit Contact</a>

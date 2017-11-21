@@ -1,0 +1,14 @@
+<!-- <h1> Contacts </h1> -->
+
+
+<%counter = 5%>
+<h3>There are <div class="numberer"><%= counter%></div> contacts</h3>
+
+<ul>
+  <% @contacts.each do |contact|%>
+  <div class = 'contacter'><li> <%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>) <u><a href="/contacts/<%= contact.id %>"><%= contact.full_name %></a></u>
+    <br><div class="sizer"><a href=#>Edit</a>    |      <a href=#>Delete</a></div>
+  </li></div>
+  <%counter +=1%>
+  <%end %>
+</ul>
